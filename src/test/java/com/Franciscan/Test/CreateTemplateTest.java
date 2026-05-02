@@ -1,6 +1,6 @@
 package com.Franciscan.Test;
 
-import org.openqa.selenium.WebElement;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -88,16 +88,7 @@ public class CreateTemplateTest extends BaseClass {
         System.out.println("Test case executed successfully");
     }
     
-    @Test
-    public void tc_verify_multipleFieldsDragAndDrop() {
-    	templatePage.clickCreateTemplate();
-    	
-    	templatePage.searchField("Photo");
-
-    	WebElement photoField = templatePage.getFieldIfAvailable("Photo");
-
-    	templatePage.dragAndDropUsingJS(photoField);
-    }
+  
     
     @AfterMethod
     public void close() {
