@@ -95,10 +95,12 @@ public class CreateTemplatePage {
    
     
     // 🔹 Action
-    public void clickCreateTemplate() {
-        wait.until(ExpectedConditions.elementToBeClickable(createTemplateLink)).click();
-    }
-    
+     public void clickCreateTemplate() {
+    	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    	    wait.until(ExpectedConditions.elementToBeClickable(createTemplateLink));
+    	    createTemplateLink.click();
+    	}
+     
  // 🔥 Dynamic Method (as you asked)
     public void selectIdCardType(String type) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
